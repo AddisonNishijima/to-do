@@ -1,3 +1,63 @@
 h1 {
-  color: blue;
+  color: lightblue;
+  font-family: 'Chewy', cursive;
+  text-shadow: black 0 0 10px;
+  font-size: 50px;
+}
+
+.jumbotron h1 {
+  text-shadow: none;
+}
+
+.filter {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.work {
+  color: brown;
+}
+
+.home {
+  color: indigo;
+}
+
+.hobby {
+  color: salmon;
+}
+
+body {
+  background-image: url(../../resources/images/wood.jpg);
+  background-repeat: repeat;
+}
+
+div.container-fluid {
+  width: 90%;
+  margin-top: 3rem;
+  background-image: url(../../resources/images/cork-tile.jpg);
+  background-repeat: repeat;
+  border: 5px solid black;
+  padding: 1rem;
+}
+
+div.jumbotron {
+  -webkit-box-shadow: -1px 2px 12px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 2px 12px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 12px 0px rgba(0,0,0,0.75);
+  text-align: center;
+  background-color: tomato;
+}
+
+.task {
+  display: inline-block;
+  background-color: papayawhip;
+  padding: 2rem;
+  margin: 1rem;
+  -webkit-box-shadow: -1px 2px 12px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 2px 12px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 2px 12px 0px rgba(0,0,0,0.75);
+}
+
+.selects {
+  margin-left: 1rem;
 }

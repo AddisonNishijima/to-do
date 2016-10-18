@@ -5,6 +5,9 @@ import { AppComponent }   from './app.component';
 import {TaskListComponent} from './task-list.component';
 import { EditTaskComponent } from './edit-task.component';
 import { NewTaskComponent } from './new-task.component';
+import { CompletenessPipe} from './completeness.pipe';
+import { CategoryPipe} from './category.pipe';
+import { TaskComponent } from './task.component';
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { NewTaskComponent } from './new-task.component';
     AppComponent,
     TaskListComponent,
     EditTaskComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    CompletenessPipe,
+    CategoryPipe,
+    TaskComponent,
   ],
   bootstrap:    [ AppComponent ]
 })

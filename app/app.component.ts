@@ -4,8 +4,13 @@ import { Task } from './task.model';
 @Component({
   selector: 'my-app',
   template: `
-  <div class="container">
-    <h1>My First Angular 2 App</h1>
+  <div class="container-fluid">
+  <div class="jumbotron">
+    <h1>To Do List App Thing</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-7">
+    <h1>Task List: </h1>
     <task-list
         [childTaskList]="masterTaskList"
         (clickSender)="showDetails($event)"
@@ -14,9 +19,13 @@ import { Task } from './task.model';
         [childSelectedTask]="selectedTask"
         (doneClickedSender)="finishedEditing()"
         ></edit-task>
-    <new-task
-        (newTaskSender)="addTask($event)"
-    ></new-task>
+        </div>
+    <div class="col-sm-5">
+      <new-task
+          (newTaskSender)="addTask($event)"
+      ></new-task>
+    </div>
+  </div>
   </div>
   `
 })
@@ -24,10 +33,10 @@ import { Task } from './task.model';
 
 export class AppComponent {
   public masterTaskList: Task[] = [
-      new Task("Create To-Do List app.", 0),
-      new Task("Learn Kung Fu.", 1),
-      new Task("Rewatch all the Lord of the Rings movies.", 2),
-      new Task("Do the laundry.", 3)
+      new Task("Create To-Do List app.", 0, "Work"),
+      new Task("Learn Kung Fu.", 1, "Hobby"),
+      new Task("Rewatch all the Lord of the Rings movies.", 2, "Home"),
+      new Task("Do the laundry.", 3, "Home")
   ];
   selectedTask: Task = null;
   showDetails(clickedTask: Task){
